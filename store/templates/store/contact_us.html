@@ -1,0 +1,128 @@
+{% extends 'store/base.html' %}
+
+{% block title %}Contact Us - Phone Store{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h1>Contact Us</h1>
+            <p class="lead">Fill out the form below to contact us:</p>
+            <!-- <form method="post" class="needs-validation" novalidate>
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    {{ form.name }}
+                    <div class="invalid-feedback">
+                        Please enter your name.
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    {{ form.email }}
+                    <div class="invalid-feedback">
+                        Please enter a valid email address.
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    {{ form.message }}
+                    <div class="invalid-feedback">
+                        Please enter a message.
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form> -->
+            <form method="post" class="needs-validation" novalidate>
+                {% csrf_token %}
+                <!-- Name Input -->
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+        
+                <!-- Email Input -->
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+        
+                <!-- Message Textarea -->
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" placeholder="Enter your message" required></textarea>
+                </div>
+        
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        
+        </div>
+        <div class="col-md-6">
+            <h1>Our Location</h1>
+            <p class="lead">Find us on the map:</p>
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d126767.56652192038!2d39.2298496!3d-6.832128!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2stz!4v1710332499049!5m2!1sen!2stz" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- FAQ Section -->
+<div class="row mt-5">
+    <div class="col-md-12">
+        <h1>Frequently Asked Questions</h1>
+        <div class="accordion" id="faqAccordion">
+            <div class="card">
+                <div class="card-header" id="question0">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#answer0" aria-expanded="true" aria-controls="answer1">
+                            What is Watu Simu?
+                        </button>
+                    </h5>
+                </div>
+                <div id="answer0" class="collapse show" aria-labelledby="question0" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        Watu Simu provides flexible smartphone financing solutions in sub-Saharan Africa, including Kenya.
+                    </div>
+                </div>
+            </div>
+        <div class="accordion" id="faqAccordion">
+            <div class="card">
+                <div class="card-header" id="question1">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#answer1" aria-expanded="true" aria-controls="answer1">
+                            What is Watu Simu?
+                        </button>
+                    </h5>
+                </div>
+                <div id="answer1" class="collapse show" aria-labelledby="question1" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        Watu Simu provides flexible smartphone financing solutions in sub-Saharan Africa, including Kenya.
+                    </div>
+                </div>
+            </div>
+        <div class="accordion" id="faqAccordion">
+            <div class="card">
+                <div class="card-header" id="question1">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#answer2" aria-expanded="true" aria-controls="answer1">
+                            What is Watu Simu?
+                        </button>
+                    </h5>
+                </div>
+                <div id="answer2" class="collapse show" aria-labelledby="question2" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        Watu Simu provides flexible smartphone financing solutions in sub-Saharan Africa, including Kenya.
+                    </div>
+                </div>
+            </div>
+            <!-- Add more FAQ items as needed -->
+        </div>
+    </div>
+</div>
+</div>
+
+{% endblock %}

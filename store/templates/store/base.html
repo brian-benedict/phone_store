@@ -1,0 +1,137 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Phone Store{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <style>
+        body {
+            background-color: #48C9B0;
+        }
+    </style>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
+    <a class="navbar-brand" href="{% url 'home' %}">Phone Store</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'home' %}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'contact_us' %}">Contact Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'about_us' %}">About Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<div class="container">
+    {% block content %}
+    {% endblock %}
+</div>
+
+
+<div class="container mt-5 background-image" >
+  <div class="row justify-content-center">
+      <div class="container mt-5">
+          <div class="row justify-content-center">
+              <div class="col-md-6 text-dark text-center">
+                  <h2>Stay up to date</h2>
+                  <p>Subscribe to our newsletter to receive updates and learn more about Watu.</p>
+              </div>
+      
+              <div class="col-md-6 mt-3 mt-md-0">
+                  <form action="/subscribe" method="post">
+                      <div class="form-group text-center">
+                          <!-- Email Input -->
+                          <input type="email" name="email" placeholder="Your Email" id="email" required 
+                                 class="form-control mb-2" style="border-radius: 25px;">
+                          
+                          <!-- Submit Button -->
+                          <button type="submit" class="btn btn-dark w-50" style="border-radius: 25px; background-color: rgba(101, 76, 215, 0.986);">
+                              Subscribe
+                          </button>
+                      </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+    
+
+
+
+<!-- <footer class="footer mt-4 py-3 bg-light text-center">
+  <div class="container">
+    <span class="text-muted">Your footer content here</span>
+  </div>
+  <div class="container">
+    <span class="text-muted">Follow us on:</span>
+    <a href="#" class="btn btn-social-icon btn-facebook mx-1"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" class="btn btn-social-icon btn-twitter mx-1"><i class="fab fa-twitter"></i></a>
+    <a href="#" class="btn btn-social-icon btn-instagram mx-1"><i class="fab fa-instagram"></i></a>
+  </div>
+</footer> -->
+<footer class="footer bg-dark text-white">
+    <div class="container py-5">
+        <div class="row">
+            <!-- About Information -->
+            <div class="col-md-4 mb-4 mb-md-0">
+                <h1 class="logo-text mb-4">Phone Store</h1>
+                <p>Our company has been providing quality products since 2023. Visit us to learn more.</p>
+            </div>
+            <!-- Contact Information -->
+            <div class="col-md-4 mb-4 mb-md-0">
+                <h5 class="text-primary">Contact Us</h5>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-map-marker-alt pr-2"></i> Nairobi, Kenya</li>
+                    <li><i class="fas fa-phone-alt pr-2"></i> +254 713623409</li>
+                    <li><i class="fas fa-envelope pr-2"></i> Phonestore@info.com</li>
+                </ul>
+            </div>
+            <!-- Subscription Form -->
+            <div class="col-md-4">
+                <h5 class="text-primary mb-3">Subscribe to Our Newsletter</h5>
+                <form action="/subscribe" method="post">
+                    <div class="input-group">
+                        <input type="email" name="email" class="form-control" placeholder="Your Email" aria-label="Your Email" required>
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-light">Subscribe</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="container text-center"">
+        <span class="text-muted">Follow us on:</span>
+        <a href="#" class="btn btn-social-icon btn-facebook mx-1"><i class="fab fa-facebook-f text-primary"></i></a>
+        <a href="#" class="btn btn-social-icon btn-twitter mx-1"><i class="fab fa-twitter text-primary"></i></a>
+        <a href="#" class="btn btn-social-icon btn-instagram mx-1"><i class="fab fa-instagram text-primary"></i></a>
+    </div>
+</footer>
+  
+
+<!-- Include Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+</body>
+</html>

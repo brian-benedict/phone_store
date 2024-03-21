@@ -1,0 +1,14 @@
+{% extends 'store/base.html' %}
+
+{% block title %}{{ products.brand }} {{ products.model_name }} - Phone Store{% endblock %}
+
+{% block content %}
+<h1>{{ products.brand }} {{ products.model_name }}</h1>
+<p>{{ products.description }}</p>
+<p>Price: ${{ products.price }}</p>
+<img src="{{ products.image.url }}" alt="{{ products.brand }} {{ products.model_name }}" style="max-width: 300px;">
+<p>
+    <a href="#" class="btn btn-primary">Buy Now</a>
+    <a href="#" class="btn btn-secondary">Loan Now</a>
+</p>
+{% endblock %}
