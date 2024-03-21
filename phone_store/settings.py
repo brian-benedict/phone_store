@@ -126,7 +126,7 @@ STATICFILES_DIRS = [
 ]
 
 # Specify the root directory where static files will be collected during deployment
-STATIC_ROOT = BASE_DIR / '/var/www/phone-store-indol.vercel.app/staticfiles'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
