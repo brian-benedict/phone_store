@@ -9,3 +9,4 @@ urlpatterns = [
     path('product-registration/', views.product_registration, name='product_registration'),
     # Additional paths can be added here for more views
 ]
+
